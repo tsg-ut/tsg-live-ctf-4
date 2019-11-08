@@ -1,22 +1,13 @@
-<<<<<<< HEAD
 version: '3'
-=======
-version: '2.4'
->>>>>>> 4d291d6aefd886c7ad3dd6b1a6e8fde5c31b86bb
 
 services:
     ctf:
         build: ./
         restart: always
         ports:
-<<<<<<< HEAD
             - "30001:30001"
         expose:
             - "30001"
-=======
-            - "31000:31000"
         expose:
-            - "31000"
-        mem_limit: 100m
->>>>>>> 4d291d6aefd886c7ad3dd6b1a6e8fde5c31b86bb
+            - "30001"
         read_only: true
