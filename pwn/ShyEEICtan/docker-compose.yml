@@ -1,0 +1,12 @@
+version: '2.4'
+
+services:
+    ctf:
+        build: ./
+        restart: always
+        ports:
+            - "31001:31001"
+        expose:
+            - "31001"
+        mem_limit: 100m
+        read_only: true
