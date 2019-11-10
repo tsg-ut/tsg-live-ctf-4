@@ -1,1 +1,1 @@
-pycrypto==3.9.1
+pycrypto==2.6.1

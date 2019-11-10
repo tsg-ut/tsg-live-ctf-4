@@ -22,9 +22,9 @@ print('A = {}'.format(factor(A)))
 print('C = {}'.format(factor(C)))
 
 bc = var('bc')
-solve = solve(bc ** 2 - B * bc + A * C, bc, solution_dict = True)[0]
+solution = solve(bc ** 2 - B * bc + A * C, bc, solution_dict = True)[0]
 
-bc_value = solve[bc].pyobject()
+bc_value = solution[bc].pyobject()
 print('bc = {}'.format(bc_value))
 
 a_prime = A + B - bc_value
