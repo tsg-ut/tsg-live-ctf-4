@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+    ctf:
+        build: ./
+        restart: always
+        ports:
+            - "20000:20000"
+        expose:
+            - "20000"
+        read_only: true
