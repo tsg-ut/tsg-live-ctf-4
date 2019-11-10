@@ -25,4 +25,4 @@ RUN chmod 444 ./flag && \
 USER user
 EXPOSE 30001
 
-CMD ["xinetd","-dontfork"]
+CMD ["xinetd","-dontfork","-f","/etc/xinetd.d/ctf"]

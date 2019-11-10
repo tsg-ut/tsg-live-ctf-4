@@ -8,6 +8,4 @@ services:
             - "30001:30001"
         expose:
             - "30001"
-        expose:
-            - "30001"
         read_only: true
