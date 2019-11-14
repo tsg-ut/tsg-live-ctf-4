@@ -31,20 +31,19 @@ char auth(void)
   for(int ix=0;pw[ix]!='\x00';++ix){
     if(ix==0){
       if(pw[ix]-2!=inp[0]){
-        printf("***\n");
         return -1;
       }
-      sum += pw[ix]-2;
-    }else
+      sum += inp[ix];
+    }else{
       if((pw[ix]^pw[ix-1])-2!=inp[ix]){
-        printf("*****%c\n",inp[ix]);
         return -1;
       }
-      sum += (pw[ix]^pw[ix-1])-2;
+      sum += inp[ix];
+    }
   }
   
   inp[26+3] = '\x00';
-  if(strtoul(inp+26,NULL,16)!=0xa3a)
+  if(strtoul(inp+26,NULL,16)!=sum)
     return -1;
   
   return 1;
