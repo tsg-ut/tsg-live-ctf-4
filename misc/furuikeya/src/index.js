@@ -11,6 +11,10 @@ const pond = {
 }
 
 rtm.on('message', async (message) => {
+    if (!message.channel.startsWith('D')) {
+        // not available in public channels
+        return;
+    }
     const match = message.text.match(/^(?<obj>.+)が池に落ちちゃった！$/);
     if (match) {
         await slack.chat.postMessage({channel: message.channel, text:':statue_of_liberty:「あらあら，かわいそうに。わたしが探してあげましょう。」'});
