@@ -7,7 +7,7 @@ module.exports = (slack, args) => {
                     type: 'section',
                     text: {
                         type: 'mrkdwn',
-                        text: "いたずら好きのあなたにはフラグを差し上げましょう。"
+                        text: ':statue_of_liberty:「探しものは見つかりませんでした……代わりと言ってはなんですが，川底にあったものを差し上げましょう。」',
                     }
                 }
             ]
