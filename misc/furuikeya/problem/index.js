@@ -15,7 +15,7 @@ rtm.on('message', async (message) => {
         // not available in public channels
         return;
     }
-    const match = message.text.match(/^(?<obj>.+)が池に落ちちゃった！$/);
+    const match = message.text.match(/^(?<obj>.+)が池に落ちちゃった$/);
     if (match) {
         await slack.chat.postMessage({channel: message.channel, text:':statue_of_liberty:「あらあら，かわいそうに。わたしが探してあげましょう。」'});
         for (kind of ['その辺で売ってる普通の', 'ギラギラと輝く白銀色の', 'ピカピカに光る黄金色の']) {
@@ -28,9 +28,10 @@ rtm.on('message', async (message) => {
             const reply = await slack.chat.postMessage({channel: message.channel, text:text.join('')});
 
             const obj = reply.message.text.slice(text[0].length, -text[3].length);
-            console.log(text[0].length, -text[3].length,obj);
             if (pond[obj]) {
                 pond[obj](message.channel);
+            } else {
+                slack.chat.postMessage({channel: message.channel, text:':statue_of_liberty:「見つからなかったわ……ごめんなさい。」'});
             }
         }
     }
