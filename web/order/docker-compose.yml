@@ -1,0 +1,10 @@
+version: '3'
+services:
+  app:
+    image: php:7-apache
+    ports:
+      - '10030:80'
+    volumes:
+      - ./writeup/html:/var/www/html
+    environment:
+      - FLAG=TSGCTF{now_listening_nothing}
