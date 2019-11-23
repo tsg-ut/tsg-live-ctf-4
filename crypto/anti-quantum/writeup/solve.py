@@ -1,4 +1,5 @@
-#!/usr/bin/env python2
+#!/usr/bin/env sage
+
 from sage.all import *
 from Crypto.Cipher import AES
 from Crypto.PublicKey import RSA

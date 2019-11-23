@@ -9,4 +9,4 @@ q = data['q']
 N = data['N']
 e = data['e']
 d = inverse(e, (p - 1) * (q - 1))
-flag = 'flag{As_I_said,_D0_N0T_USE_ECB!}'
+flag = 'TSGCTF{As_I_said,_D0NT_USE_ECB!}'
