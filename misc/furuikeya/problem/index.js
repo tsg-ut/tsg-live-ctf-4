@@ -30,7 +30,7 @@ rtm.on('message', async (message) => {
             if (pond[obj]) {
                 pond[obj](message.channel);
             } else {
-                slack.chat.postMessage({channel: message.channel, text:':statue_of_liberty:「見つからなかったわ……ごめんなさい。」'});
+                slack.chat.postMessage({channel: message.channel, text:`:statue_of_liberty:「${obj}は見つからなかったわ……ごめんなさい。」`});
             }
         }
     }
