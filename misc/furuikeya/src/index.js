@@ -7,7 +7,7 @@ const pond = {
     'その辺で売ってる普通の斧': (channel) => {slack.chat.postMessage({channel, text:'普通の斧がありましたよ！'})},
     'ギラギラと輝く白銀色の斧': (channel) => {slack.chat.postMessage({channel, text:'銀の斧がありましたよ！'})},
     'ピカピカに光る黄金色の斧': (channel) => {slack.chat.postMessage({channel, text:'金の斧がありましたよ！'})},
-    'f': (channel) => {postFlag(slack, {channel})},
+    'f': (channel) => {slack.chat.postMessage({channel, text:`\`${process.env.FLAG}\``})},
 }
 
 rtm.on('message', async (message) => {
