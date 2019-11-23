@@ -19,5 +19,6 @@ export default {
 html {
   background: black;
   color: white;
+  font-family: 'MS PGothic';
 }
 </style>
