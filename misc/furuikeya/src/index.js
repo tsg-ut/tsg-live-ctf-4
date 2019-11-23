@@ -1,7 +1,6 @@
 const {RTMClient, WebClient} = require('@slack/client');
 const rtm = new RTMClient(process.env.SLACK_TOKEN);
 const slack = new WebClient(process.env.SLACK_TOKEN);
-const postFlag = require('./postFlag');
 
 const pond = {
     'その辺で売ってる普通の斧': (channel) => {slack.chat.postMessage({channel, text:'普通の斧がありましたよ！'})},
