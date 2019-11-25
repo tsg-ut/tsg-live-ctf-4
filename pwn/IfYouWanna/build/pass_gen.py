@@ -1,4 +1,4 @@
-pw = "swallow+moratorium+jp3bgy="
+pw = "mora+cookie+nan+t4shi+swa11ow="
 num = 0
 for a in pw:
   num += ord(a)
@@ -13,4 +13,4 @@ for a in pw:
   else:
     en = en + [en[-1]^(ord(a)+2)]
 
-print(map(hex,en))
+print(list(map(hex,en[:-3])))
